@@ -126,23 +126,40 @@
         <div class="row">
           <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
           
-            <img src="" alt="Image of your project" class="img-fluid">
+            <img src="images/Birthday Paradox Photo.png" alt="Image of your project" class="img-fluid">
           
           </div>
           <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
             <div class="mb-4">
-              <h3>Project Title</h3>
+              <h3>Birthday Paradox Simulation</h3>
               <p>
-               Motivation of the project
+               I had heard from my instructor about the Birthday Paradox. 
+               The way this "paradox" works is if 23 people are gathered in a room, there is about a 50% chance two people will share the same birthday. 
+               I was interested to see the correlation between the number of individuals in the room and the percent that two individuals had the same birthday. 
+               Before long, I began creating my simulation.
               </p>
               <p>
-              Functional requirements/what the project does
+              Functional requirements/what the project does: 
+              This project takes lists of random birthdays and checks to see if these lists contain duplicate birthdays.
+              It then calculates the percentage of lists that contain duplicate birthdays, and displays a chart of the number of birthdays per list, along with the percentage of repeated birthdays.
+
               </p>
               <p>
-              Project design
+              Project design: 
+              This project first uses a random number generator to provide a random birthday that is part of a birthday class. 
+              The next step creates a Trial, which generates a list of random birthdays and checks if that list contains any duplicates.
+              There are a total of 20 Trials per Experiment, which provides the percent of trials that contain a duplicate birthday.
+              Finally, the simulation increments the number of birthdays per trial by 5 after each experiment, until we reach 100 birthdays per trial.
               </p>
               <p>
-              Implementation
+              Implementation:
+              This project first works with the Month and MonthDay class that can be imported from java. 
+              These objects are created using a random number generator, and the random dates are used to created a Birthday object in the Birthday class.
+              The Birthday objects are used to create a Trial in the Trial class. A Trial creates a list of Birthdays, then returns true if the list of birthdays contain any duplicates.
+              There are a total of 20 Trials ran per experiment, which is coded in the Experiment class. This class collects the number of trials that returned true, and divides that number by the number of trials to return the percentage of trials with duplicate birthdays.
+              Everything is tied together in the Simulation class, which contains our main method. 
+              The Simulation class uses a loop to increase the number of people per trial (the number of birthdays in a list) by 5 after an experiment is ran.
+              The code completes by printing a list of the number of people per trial with the resulting percentage of trials that contained a duplicate birthday.
               </p>
 
 
