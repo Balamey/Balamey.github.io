@@ -92,7 +92,7 @@
           <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
             <div class="mb-4">
               <p>
-               My name is Brett Lamey and I am currently a Junior at the University of San Diego. I am persuing a degree
+               My name is Brett Lamey and I am currently a Junior at the University of San Diego. I am pursuing a degree
                in Computer Science with a minor in Finance.
                Hometown: Vancouver, WA
               </p>
@@ -164,12 +164,52 @@
 
 
             </div>
+          </div>
+        </div>  
 
-            
-
+        <div class="row mt-5">
+          <div class="col-lg-5 mr-auto" data-aos="fade-up" data-aos-delay="">
+            <div class="mb-4">
+              <h3>Casino Project</h3>
+              <p>
+              For our final project of the semester, 3 of my peers and I decided to create a terminal Casino. In this project, the user gambles fake money on
+              familiar Casino games. They are given the choice to play Roulette, Blackjack, Slots, Craps, or Baccarat, and each game has its own
+              specific set of rules that the user must follow. After each round, money is either added or removed from the user's balance depending on the outcome
+              of the game.
+              </p>
+              <p>
+              Functional Requirements/Roulette features:
+              For my contribution to the project, I coded the Roulette game. Roulette simulates a standard roulette wheel, allowing the player to place bets and spin the wheel.
+              The program then determines what space the wheel lands on, checks if the player's bet wins based on the winning space, and
+              updates the player's balance depending on if the user won or lost their bet.
+              </p>
+              <p>
+              Project Design:
+              The Roulette game is built around a wheel containing numbered slots from 0 to 36.
+              The player starts by entering the amount they want to wager. They then select their bet type.
+              A user can bet on many possible outcomes, such as a specific number, red, black, or green, or odd or even.
+              The wheel is then spun using a random number generator to determine the outcome.
+              The program compares the result against the player's bet and calculates the amount won or lost and updates the balance accordingly.
+              </p>
+              <p>
+              Implementation:
+              This project works with both a scanner for user input, and the Random class for random number generation.
+              A RouletteWheel class handles the creation of the wheel. The wheel is represented by a list where the 0th index is green, and the rest of the 
+              indices altnerate between red and black. The Roulette class simulates a round of Roulette. It starts by getting the user's wager via the scanner.
+              It then spins the wheel and prints the result of the spin. A handleBet method deals with wager multiplier logic, then 
+              returns the amount of money that needs to be added or subtracted from the user's Casino balance. Finally, the balance is updated, and another round begins.
+              At the start of every round, the user is prompted to wager no money if they would like to stop playing Roulette. If a 0 is entered, the user is taken
+              back to the main menu of the Casino.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="100">
+        <img src="images/Casino Photo.png" alt="Screenshot of Casino Project" class="img-fluid">
+            </div>
           </div>
         </div>
       </div>
+
       
 
     </section>
