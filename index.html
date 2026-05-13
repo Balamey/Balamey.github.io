@@ -208,6 +208,46 @@
             </div>
           </div>
         </div>
+
+        <div class="row mt-5">
+          <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
+            <img src="images/Elevator Simulator Photo.png" alt="Screenshot of Elevator Project" class="img-fluid">
+          </div>
+          <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
+            <div class="mb-4">
+              <h3>Elevator Simulation</h3>
+              <p>
+                In my Computer Science course, our class was tasked with building an elevator simulation as a group project.
+                The simulation models a building with multiple elevator types, each with their own rules for accepting and 
+                handling passenger calls. After each round, the status of the simulation is displayed in the terminal.
+              </p>
+              <p>
+                Functional Requirements/What the Project Does:
+                The simulation reads a list of passenger calls from a CSV file, where each call contains a start floor and an end floor.
+                The scheduler assigns these calls to available elevators each round, and the simulation runs until all calls have been 
+                completed and every elevator has returned to the first floor. The state of each elevator is printed to the terminal after every round.
+              </p>
+              <p>
+                Project Design:
+                The project implements four elevator types: Standard, Freight, Penthouse, and Express. These elevator types each with their own rules 
+                that decide whether or not the elevator can accept a call. Two scheduler types are available: a Simple Scheduler, which assigns the next 
+                call to the first available elevator, and a Complex Scheduler, which selects the elevator that can reach the 
+                call's start floor in the least number of rounds. The simulation continues round by round until all calls are resolved 
+                and all elevators are idle on the first floor.
+              </p>
+              <p>
+                Implementation:
+                The Simulator class contains the main method and is responsible for handling command line arguments, 
+                reading the CSV file using a Scanner, and building the list of elevators and calls. It then runs the 
+                simulation loop, calling the scheduler each round to assign calls, and moving each elevator one step 
+                using the moveOneRound method. The SimpleScheduler assigns the next unassigned call to the first elevator 
+                that returns true from canAcceptCall. The ComplexScheduler improves on this by collecting all eligible 
+                elevators and selecting the one with the lowest calculated round cost based on the elevator's current 
+                floor, direction, and number of passengers.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
 
       
